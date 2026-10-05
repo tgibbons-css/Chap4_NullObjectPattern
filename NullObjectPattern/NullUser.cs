@@ -6,11 +6,14 @@ using System.Threading.Tasks;
 
 namespace NullObjectPattern
 {
+    /// <summary>
+    /// Represents a missing user so callers can use IUser without null checks.
+    /// </summary>
     public class NullUser : IUser
     {
         public void IncrementSessionTicket()
         {
-            // do nothing
+            // The null object safely ignores operations that need a real user.
         }
 
         public string Name
